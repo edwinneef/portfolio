@@ -1,0 +1,14 @@
+//
+// Typography
+//
+
+h1, .title--xl {
+    font-family: Gilroy;
+    font-weight: bold;
+    font-size: 65px;
+    line-height: 110%;
+}
+
+.text--l {
+    @include text--l;
+}

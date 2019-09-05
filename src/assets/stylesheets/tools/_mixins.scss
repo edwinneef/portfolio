@@ -1,0 +1,15 @@
+//
+// Mixins
+//
+
+@mixin text--l {
+    font-size: 25px;
+    line-height: 150%;
+}
+
+
+@mixin tablet-up {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}

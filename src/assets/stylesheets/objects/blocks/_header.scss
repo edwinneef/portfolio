@@ -1,0 +1,62 @@
+// 
+// Header
+//
+
+.header {
+    background: linear-gradient(180deg, #292642 0%, #11101B 100%);
+    max-width: 100vw;
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.header__background-image {
+    width: 200vw;
+    height: 50vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    animation: wave 30000ms ease-in-out infinite alternate;
+}
+
+.header__inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.header__content {
+    width: 1050px;
+    padding: 0 25px;
+    max-width: 100%;
+    text-align: center;
+    color: $white;
+}
+
+.header__intro-text {
+    @include text--l;
+    color: rgba(232, 226, 252, 0.7);
+
+    @include tablet-up {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
+@keyframes wave {
+    0% {
+        transform: translateY(0) translateX(-25%);
+    }
+    50% {
+        transform: translateY(-30px) translateX(-35%);
+
+    }
+    100% {
+        transform: translateY(0) translateX(-25%);
+    }
+}
