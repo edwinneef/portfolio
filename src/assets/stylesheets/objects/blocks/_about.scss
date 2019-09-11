@@ -3,7 +3,7 @@
 //
 
 .block--about {
-    margin-top: -80px;
+    margin-top: 80px;
     @include padding-bottom(5rem);
     .block__inner {
         position: relative;
@@ -44,9 +44,12 @@
 }
 
 .about__intro {
-    font-size: 22px;
+    font-size: 18px;
     line-height: 190%;
     margin-bottom: 0;
+    @include tablet-up {
+        font-size: 22px;
+    }
 }
 
 .about__header {
@@ -80,8 +83,11 @@
 
 .about__body {
     font-size: 17px;
-    padding-top: 50px;
+    padding-top: 30px;
     line-height: 1.7;
+    @include tablet-up {
+        padding-top: 50px;
+    }
 }
 
 .about__heading {

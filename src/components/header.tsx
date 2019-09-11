@@ -15,7 +15,7 @@ export default function headerComponent(props:headerProps) {
                 <h1>{props.title}</h1>
                 <p className="header__intro-text" dangerouslySetInnerHTML={{__html: props.intro}}></p>
                 <div className="header__actions">
-                  <button className={`btn btn--primary btn--mail ${props.scrolled && 'btn--mail--hide'}`}>{props.mail_button.text}</button>
+                  <button className={`btn btn--black-white btn--mail ${props.scrolled && 'btn--mail--hide'}`}>{props.mail_button.text}</button>
                   <button className="btn-hollow btn-hollow--white">{props.secondary_button}</button>
                 </div>
               </div>

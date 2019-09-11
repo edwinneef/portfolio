@@ -67,6 +67,15 @@ button,
     }
 }
 
+.btn--black-white {
+    background-color: $white;
+    color: $base-font-color;
+    &:hover, &:focus {
+        background-color: $base-font-color;
+        color: $white;
+    }
+}
+
 .btn--turquoise {
     background-color: $turquoise;
     &:hover, &:focus {
@@ -106,6 +115,6 @@ button,
     &:hover, &:focus {
         opacity: 1;
         background-color: $white;
-        color: $purple;
+        color: $base-font-color;
     }
 }
