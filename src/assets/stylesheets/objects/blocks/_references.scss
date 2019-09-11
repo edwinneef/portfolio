@@ -6,7 +6,6 @@
 
 .references__list {
     margin: 80px auto 60px auto;
-    min-height: 500px;
     position: relative;
     background: $white;
     border-radius: 10px;
@@ -16,25 +15,8 @@
 
     li {
         text-align: left;
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        opacity: 0;
         padding: 35px;
         width: 100%;
-
-        &.hide {
-            transition: opacity 350ms ease;
-            pointer-events: none;
-        }
-
-        &.show {
-            transition: opacity 350ms ease;
-            transition-delay: 175ms;
-            opacity: 1;
-            pointer-events: all;
-        }
     }
 
 

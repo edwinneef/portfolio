@@ -57,7 +57,9 @@
 .service__heading {
     color: $blue-grey;
     margin-bottom: 20px;
-    min-height: 4.8rem;
+    @include tablet-up {
+        min-height: 4.8rem;
+    }
 }
 
 .service__text {

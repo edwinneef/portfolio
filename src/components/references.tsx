@@ -40,17 +40,15 @@ export default class ReferencesComponent extends React.Component<referencesSecti
                     </header>
 
                     <ul className="references__list">
-                        {this.props.references.map((e, index) => (
-                        <li key={index} className={index == this.state.currentReference ? 'show' : 'hide'}>
+                        <li>
                             <div className="reference__inner">
-                                <h3 className="reference__heading">{e.name}</h3>
-                                <span className="reference__function">{e.function}</span>
+                                <h3 className="reference__heading">{this.props.references[this.state.currentReference].name}</h3>
+                                <span className="reference__function">{this.props.references[this.state.currentReference].function}</span>
                                 <div className="reference__text">
-                                    {e.text}
+                                    {this.props.references[this.state.currentReference].text}
                                 </div>
                             </div>
                         </li>
-                        ))}
                     </ul>
 
                     <ul className="references__controls">

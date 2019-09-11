@@ -96,8 +96,8 @@
     flex-grow: 1;
     margin-top: 30px;
     position: relative;
-    min-height: 300px;
-    
+    min-height: 250px;
+
     @include tablet-up {
         min-height: 377px;
         text-align: center;

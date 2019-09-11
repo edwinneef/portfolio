@@ -21,9 +21,9 @@ export default function CaseComponent(props: caseSection) {
                     </div>
                     <div className="case__actions">
 
-                        {props.live_demo_url && (
-                            <a href={props.live_demo_url} className="btn btn--primary" target="_blank" rel="nofollow">Live demo</a>
-                        )}
+                        {props.buttons.map((e, index) => (
+                            <a href={e.url} className="btn btn--primary" target="_blank" rel={e.noFollow ? 'nofollow' : ''}>{e.text}</a>
+                        ))}
 
                     </div>
                 </div>

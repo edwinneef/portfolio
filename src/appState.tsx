@@ -9,9 +9,9 @@ const appState: appStateType = {
       type: "header",
       title: "Hi! Ik ben Edwin Neef, een developer met een passie voor design",
       intro:
-        "die zich in zijn vrije tijd ook graag bezig houdt met UI en UX design.",
-      mail_button: { text: "Neem contact op", email: "edwinneef@gmail.com" },
-      secondary_button: "Meer over mij"
+        "Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnisdisparturient montes, nascetur ridiculus mus.",
+      mail_button: { text: "Stuur mail", email: "edwinneef@gmail.com" },
+      secondary_button: "Lees meer"
     },
     {
       type: "intro",
@@ -74,22 +74,22 @@ const appState: appStateType = {
       title: "Wat anderen zeggen",
       references: [
         {
+          name: "Eelco",
+          function: "Internet marketeer bij ZZP",
+          text:
+            "Sinds enige jaren werk ik geregeld samen met Edwin. Als online marketeer heb ik Edwin meerdere websites laten ontwerpen (design, front-end en back-end), waarbij mijn voorwaarden niet gering waren. Hierbij is het mij altijd opgevallen dat Edwin zijn kennis groot en divers is en dat hij altijd bereid is dieper in bepaalde materie te duiken. De samenwerking verliep hierin zeer prettig."
+        },
+        {
           name: "Dominique van der Mast",
           function: "Illustrator bij ZZP",
           text:
             "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."
         },
         {
-          name: "Edwin Neef",
-          function: "Developer bij Vidda Digital",
+          name: "Rudi Sanders",
+          function: "Eigenaar van Buro Souljazz",
           text:
             "Aenean lacinia bibendum nulla sed consectetur. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus."
-        },
-        {
-          name: "Eelco",
-          function: "Internet marketeer bij ZZP",
-          text:
-            "Sinds enige jaren werk ik geregeld samen met Edwin. Als online marketeer heb ik Edwin meerdere websites laten ontwerpen (design, front-end en back-end), waarbij mijn voorwaarden niet gering waren. Hierbij is het mij altijd opgevallen dat Edwin zijn kennis groot en divers is en dat hij altijd bereid is dieper in bepaalde materie te duiken. De samenwerking verliep hierin zeer prettig."
         }
       ]
     },
