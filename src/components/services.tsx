@@ -16,7 +16,10 @@ export default function ServicesComponent(props: servicesSection) {
                     {props.services.map(e => (
                     <li>
                         <div className="service__inner">
-                            {e.icon}
+                            
+                            <svg className="service__icon">
+                                <use xlinkHref={`#${e.icon}`} />
+                            </svg>
                             <h3 className="service__heading">{e.title}</h3>
                             <div className="service__text">
                                 {e.text}

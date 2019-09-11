@@ -18,14 +18,19 @@ export interface headerSection extends section {
     secondary_button: string
 }
 
+export type ButtonType = {
+    text: string
+    url: string
+    noFollow?: boolean
+}
+
 export interface caseSection extends section {
     type: 'case'
     align?: 'left' | 'right'
     color?: 'purple' | 'turquoise' | 'tomato'
     text: string
     live_demo_url?: string
-    github_url?: string
-    dribbble_url?: string
+    buttons: ButtonType[]
 }
 
 export interface service {

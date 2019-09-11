@@ -25,13 +25,6 @@ export default function CaseComponent(props: caseSection) {
                             <a href={props.live_demo_url} className="btn btn--primary" target="_blank" rel="nofollow">Live demo</a>
                         )}
 
-                        {props.github_url && (
-                            <a href={props.github_url} className="btn-hollow btn-hollow--white" target="_blank" rel="nofollow">Github Repo</a>
-                        )}
-
-                        {props.dribbble_url && (
-                            <a href={props.dribbble_url} className="btn-hollow btn-hollow--white" target="_blank" rel="nofollow">Dribbble</a>
-                        )}
                     </div>
                 </div>
                 <div className="case__visual">
