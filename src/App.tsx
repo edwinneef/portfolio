@@ -16,10 +16,14 @@ export default class App extends React.Component<AppProps, appStateType> {
 
   constructor(props: AppProps) {
     super(props);
-    this.state = appState;
+
+    this.state = appState
 
     this.handleScroll = this.handleScroll.bind(this)
     this.handleResize = this.handleResize.bind(this)
+    this.showForm = this.showForm.bind(this)
+    this.hideForm = this.hideForm.bind(this)
+
   }
 
   componentWillMount() {
@@ -52,6 +56,20 @@ export default class App extends React.Component<AppProps, appStateType> {
     })
   }
 
+  showForm() {
+    this.setState({
+      ...this.state,
+      showForm: true
+    })
+  }
+
+  hideForm() {
+    this.setState({
+      ...this.state,
+      showForm: false
+    })
+  }
+
   render() {
 
     let viewport : viewportType;
@@ -63,13 +81,13 @@ export default class App extends React.Component<AppProps, appStateType> {
     return (
       <>
 
-        <ContactComponent scrolled={this.state.scrolled} />
+        <ContactComponent show={this.state.showForm} hideForm={() => this.hideForm()} />
 
         {this.state.sections.map(b => {
           
           switch(b.type) {
             case 'header':
-              return <HeaderComponent {...b} scrolled={this.state.scrolled} />;
+              return <HeaderComponent {...b} scrolled={this.state.scrolled} showForm={() => this.showForm()} />;
             case 'intro':
               return <AboutComponent {...b} viewport={viewport} />;
             case 'case':

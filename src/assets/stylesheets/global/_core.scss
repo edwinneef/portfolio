@@ -19,12 +19,19 @@ body {
 }
 
 html {
-    overflow-y: scroll; // Force vertical scrollbar to avoid jumping if navigating from short to long page and vice versa
     box-sizing: border-box;
+}
+
+body {
+    overflow-y: scroll;
 }
 
 .text-styled {
     p:not(:last-child) {
         margin-bottom: 20px;
     }
+}
+
+body.modal-open {
+    overflow: hidden !important;
 }

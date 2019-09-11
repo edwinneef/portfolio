@@ -1,3 +1,124 @@
 //
 // Contact
 //
+
+.contact {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.contact__close {
+    width: 32px;
+    height: 32px;
+    background: $base-font-color;
+    opacity: 0.3;
+    position: absolute;
+    right: 25px;
+    top: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:after, &:before {
+        content: '';
+        position: absolute;
+        left: 9px;
+        top: 14px;
+        width: 14px;
+        height: 3px;
+        background-color: $white;
+        transition: transform 300ms ease;
+    }
+    &:before {
+        transform: rotate(45deg);
+    }
+    &:after {
+        transform: rotate(135deg) ;
+    }
+    &:hover {
+        &:before {
+            transform: rotate(135deg);
+        }
+        &:after {
+            transform: rotate(225deg);
+        }
+    }
+}
+
+.contact-background {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+.contact__notification {
+    font-size: 16px;
+    padding: 25px;
+    border-radius: 10px;
+    color: $white;
+
+    &--error {
+        background: $tomato--light;
+    }
+    &--success {
+        background: $turquoise;
+    }
+}
+
+.contact__inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: $white;
+    padding: 35px;
+    border-radius: 10px;
+    z-index: 11;
+    cursor: auto;
+    max-width: 500px;
+}
+
+.contact__intro {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 20px 0;
+}
+
+.contact__row {
+    margin: 15px 0;
+}
+
+.contact__row--action {
+    margin-top: 30px;
+}
+
+.contact__label {
+    display: block;
+    font-weight: bold;
+}
+
+.contact__field {
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    background-color: $white;
+    border: 1px solid #ddd;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    &--textarea {
+        height: 120px;
+        resize: none;
+    }
+    &::placeholder {
+        opacity: 0.4;
+    }
+}

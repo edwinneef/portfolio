@@ -4,14 +4,15 @@ const appState: appStateType = {
   scrolled: false,
   windowWidth: 0,
   windowHeight: 0,
+  showForm: false,
   sections: [
     {
       type: "header",
       title: "Hi! Ik ben Edwin Neef, een developer met een passie voor design",
       intro:
         "Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnisdisparturient montes, nascetur ridiculus mus.",
-      mail_button: { text: "Stuur mail", email: "edwinneef@gmail.com" },
-      secondary_button: "Lees meer"
+      mail_button: { text: "Stuur mij een mail", email: "edwinneef@gmail.com" },
+      secondary_button: "Meer over mij"
     },
     {
       type: "intro",
@@ -75,21 +76,25 @@ const appState: appStateType = {
       references: [
         {
           name: "Eelco",
-          function: "Internet marketeer bij ZZP",
+          function: "Internet marketeer",
           text:
             "Sinds enige jaren werk ik geregeld samen met Edwin. Als online marketeer heb ik Edwin meerdere websites laten ontwerpen (design, front-end en back-end), waarbij mijn voorwaarden niet gering waren. Hierbij is het mij altijd opgevallen dat Edwin zijn kennis groot en divers is en dat hij altijd bereid is dieper in bepaalde materie te duiken. De samenwerking verliep hierin zeer prettig."
         },
         {
-          name: "Dominique van der Mast",
-          function: "Illustrator bij ZZP",
+          name: "Hans Muelders",
+          function: "Designer",
+          company: "Wild",
+          company_url: "https://www.hansmuelders.com/",
           text:
             "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."
         },
         {
           name: "Rudi Sanders",
-          function: "Eigenaar van Buro Souljazz",
+          function: "Founder & Drummer",
+          company: "Buro Souljazz",
+          company_url: "https://www.burosouljazz.com/",
           text:
-            "Aenean lacinia bibendum nulla sed consectetur. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus."
+            "Bij de realisatie van de site voor Buro Souljazz kwamen veel dingen naar voren die niet standaard waren. Edwin bleef daarbij telkens weer zoeken naar mogelijkheden om ze te realiseren. Zelden kreeg ik te horen dat iets technisch niet te realiseren was. Edwin heeft bij de bouw van de website van Buro Souljazz altijd een open houding getoond als het gaat om onze wensen. In de communicatie was hij constructief en kritisch waar nodig."
         }
       ]
     },

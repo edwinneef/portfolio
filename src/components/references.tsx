@@ -28,7 +28,11 @@ export default class ReferencesComponent extends React.Component<referencesSecti
         })
     }
 
+
     render() {
+
+        const currentReference = this.props.references[this.state.currentReference];
+
         return(
             <section className="block block--references">
                 <div className="block__inner">
@@ -42,10 +46,18 @@ export default class ReferencesComponent extends React.Component<referencesSecti
                     <ul className="references__list">
                         <li>
                             <div className="reference__inner">
-                                <h3 className="reference__heading">{this.props.references[this.state.currentReference].name}</h3>
-                                <span className="reference__function">{this.props.references[this.state.currentReference].function}</span>
+                                <h3 className="reference__heading">{currentReference.name}</h3>
+                                <span className="reference__function">
+                                    <strong>{currentReference.function}</strong>
+                                    {currentReference.company && currentReference.company_url && (
+                                    <span> bij <a href={currentReference.company_url} rel="nofollow" target="_blank">{currentReference.company}</a></span>
+                                    )}
+                                    {currentReference.company && !currentReference.company_url && (
+                                    <span> bij {currentReference.company}</span>
+                                    )}
+                                </span>
                                 <div className="reference__text">
-                                    {this.props.references[this.state.currentReference].text}
+                                    {currentReference.text}
                                 </div>
                             </div>
                         </li>

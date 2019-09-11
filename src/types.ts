@@ -48,6 +48,8 @@ export interface reference {
     name: string
     function: string
     text: string
+    company?: string
+    company_url?: string
 }
 
 export interface referencesSection extends section {
@@ -59,6 +61,7 @@ export interface appStateType {
     scrolled: boolean
     windowWidth: number
     windowHeight: number
+    showForm: boolean
     sections: Array<headerSection | aboutSection | caseSection | servicesSection | referencesSection>
 }
 
