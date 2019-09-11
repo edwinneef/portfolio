@@ -2,14 +2,44 @@
 // Mixins
 //
 
+@mixin sr-text {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    left: -9999px;
+    top: -9999px;
+}
+
+@mixin title {
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+@mixin title--xl {
+    @include font-size(4rem);
+}
+
+@mixin title--l {
+    @include font-size(3.625rem)
+}
+
+@mixin title--m {
+    @include font-size(2rem);
+}
+
 @mixin text--l {
-    font-size: 25px;
-    line-height: 150%;
+    @include font-size(1.5625rem);
+    line-height: 1.5;
 }
 
 
 @mixin tablet-up {
     @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop-up {
+    @media only screen and (min-width: 1280px) {
         @content;
     }
 }

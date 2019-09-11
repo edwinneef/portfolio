@@ -1,4 +1,24 @@
+//
+// Colors
+//
+
 $base-background-color: #F0F1F9;
 $base-font-color: #656374;
 
 $white: #FFFFFF;
+$black: #000000;
+
+$blue-grey: #504D61;
+$dark-blue: #26233C;
+
+$purple: #6838F2;
+$purple--light: lighten($purple, 7%);
+$purple--dark: darken($purple, 7%);
+
+$turquoise: #20B29B;
+$turquoise--light: lighten($turquoise, 7%);
+$turquoise--dark: darken($turquoise, 7%);
+
+$tomato: #FC6F54;
+$tomato--light: lighten($tomato, 7%);
+$tomato--dark: darken($tomato, 7%);

@@ -11,9 +11,17 @@ body {
     -moz-osx-font-smoothing: grayscale;
     font-size-adjust: auto;
     min-width: 320px;
+    line-height: 1.9;
+    font-size: 18px;
 }
 
 html {
     overflow-y: scroll; // Force vertical scrollbar to avoid jumping if navigating from short to long page and vice versa
     box-sizing: border-box;
+}
+
+.text-styled {
+    p:not(:last-child) {
+        margin-bottom: 20px;
+    }
 }

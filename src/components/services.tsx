@@ -1,0 +1,31 @@
+import * as React from 'react';
+import { servicesSection } from '../types';
+
+export default function ServicesComponent(props: servicesSection) {
+    return(
+        <section className="block block--services">
+            <div className="block__inner">
+
+                <header className="services__header">
+                    <h2 className="services__heading heading--centered">
+                        {props.title}
+                    </h2>
+                </header>
+
+                <ul className="services__list">
+                    {props.services.map(e => (
+                    <li>
+                        <div className="service__inner">
+                            {e.icon}
+                            <h3 className="service__heading">{e.title}</h3>
+                            <div className="service__text">
+                                {e.text}
+                            </div>
+                        </div>
+                    </li>
+                    ))}
+                </ul>
+            </div>
+        </section>
+    )
+}

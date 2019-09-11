@@ -1,0 +1,63 @@
+//
+// Services
+//
+
+.block--services {
+
+}
+
+.services__list {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    li {
+        width: 100%;
+        list-style: none;
+        text-align: center;
+        transition: transform 300ms ease;
+        
+        &:hover {
+            transform: scale(1.1);
+            .service__inner {
+                box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.03), 0px 5px 15px rgba(0, 0, 0, 0.12), ;
+            }
+        }
+    }
+
+    @include tablet-up {
+        li {
+            width: 50%;
+        }   
+    }
+
+    @include desktop-up {
+        li {
+            width: 33.3%;
+        }
+    }
+}
+
+.service__inner {
+    margin: 25px 0;
+    padding: 25px 35px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.03);
+    background-color: $white;
+    transition: box-shadow 300ms ease;
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    @include tablet-up {
+        margin: 25px;
+    }
+}
+
+.service__heading {
+    color: $blue-grey;
+    margin-bottom: 20px;
+}
+
+.service__text {
+}

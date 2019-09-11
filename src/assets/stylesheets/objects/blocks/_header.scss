@@ -31,7 +31,7 @@
 }
 
 .header__content {
-    width: 1050px;
+    width: 1100px;
     padding: 0 25px;
     max-width: 100%;
     text-align: center;
@@ -41,6 +41,7 @@
 .header__intro-text {
     @include text--l;
     color: rgba(232, 226, 252, 0.7);
+    margin: 30px auto 45px auto;
 
     @include tablet-up {
         padding-left: 100px;
@@ -48,15 +49,8 @@
     }
 }
 
-@keyframes wave {
-    0% {
-        transform: translateY(0) translateX(-25%);
-    }
-    50% {
-        transform: translateY(-30px) translateX(-35%);
-
-    }
-    100% {
-        transform: translateY(0) translateX(-25%);
+.header__actions {
+    .btn {
+        margin: 0 7px;
     }
 }

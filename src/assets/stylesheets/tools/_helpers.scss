@@ -1,0 +1,12 @@
+//
+// Helpers
+//
+
+.heading--centered {
+    text-align: center;
+    color: $dark-blue;
+}
+
+.sr-text {
+    @include sr-text;
+}
