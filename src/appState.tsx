@@ -86,7 +86,7 @@ const appState: appStateType = {
           company: "Wild",
           company_url: "https://www.hansmuelders.com/",
           text:
-            "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."
+            "Ik heb het samenwerken met Edwin altijd als prettig ervaren omdat hij meedenkt met het vertalen van design naar front-end. Dit zorgt ervoor dat het geen overdracht maar teamwork is wat leidt tot een resultaat waar zowel de designer als de developer trots op is. Dat Edwin zich pro-actief opstelt en goed communiceert draagt hier zeker aan bij."
         },
         {
           name: "Rudi Sanders",
