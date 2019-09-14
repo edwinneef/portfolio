@@ -96,7 +96,6 @@
     flex-grow: 1;
     margin-top: 30px;
     position: relative;
-    min-height: 250px;
 
     @include tablet-up {
         min-height: 377px;
@@ -128,6 +127,11 @@
     width: 75%;
     left: 0;
     z-index: 1;
+    position: relative;
+
+    @include tablet-up {
+        position: absolute;
+    }
 }
 
 .case-visual--tablet {
@@ -137,9 +141,15 @@
     border-right-width: 7px;
     width: 30%;
     right: 0;
-    bottom: 0;
+    bottom: 5px;
     top: auto;
     z-index: 2;
+    @include tablet-up {
+        bottom: 20%;
+    }
+    @include desktop-up {
+        bottom: 0;
+    }
 }
 
 .case-visual--mobile {
@@ -152,6 +162,12 @@
     right: 25%;
     top: auto;
     bottom: -5px;
+    @include tablet-up {
+        bottom: 15%;
+    }
+    @include desktop-up {
+        bottom: -5px;
+    }
 }
 
 

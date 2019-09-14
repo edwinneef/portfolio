@@ -5,6 +5,7 @@ import Waves from './waves';
 type headerProps = headerSection & {
   scrolled: boolean
   showForm?: () => void
+  scrollToAbout?: () => void
 }
 
 export default function headerComponent(props:headerProps) {
@@ -17,7 +18,7 @@ export default function headerComponent(props:headerProps) {
                 <p className="header__intro-text" dangerouslySetInnerHTML={{__html: props.intro}}></p>
                 <div className="header__actions">
                   <button className={`btn btn--black-white btn--mail ${props.scrolled && 'btn--mail--hide'}`} onClick={props.showForm}>{props.mail_button.text}</button>
-                  <button className="btn-hollow btn-hollow--white">{props.secondary_button}</button>
+                  <button className="btn-hollow btn-hollow--white" onClick={props.scrollToAbout}>{props.secondary_button}</button>
                 </div>
               </div>
               

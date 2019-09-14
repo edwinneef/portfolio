@@ -10,7 +10,7 @@ const appState: appStateType = {
       type: "header",
       title: "Hi! Ik ben Edwin Neef, een developer met een passie voor design",
       intro:
-        "Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnisdisparturient montes, nascetur ridiculus mus.",
+        "Ik word vrolijk van React, Typescript, CSS en HTML.",
       mail_button: { text: "Stuur mij een mail", email: "edwinneef@gmail.com" },
       secondary_button: "Meer over mij"
     },
@@ -83,7 +83,7 @@ const appState: appStateType = {
         {
           name: "Hans Muelders",
           function: "Designer",
-          company: "Wild",
+          company: "Hans Muelders",
           company_url: "https://www.hansmuelders.com/",
           text:
             "Ik heb het samenwerken met Edwin altijd als prettig ervaren omdat hij meedenkt met het vertalen van design naar front-end. Dit zorgt ervoor dat het geen overdracht maar teamwork is wat leidt tot een resultaat waar zowel de designer als de developer trots op is. Dat Edwin zich pro-actief opstelt en goed communiceert draagt hier zeker aan bij."

@@ -56,8 +56,8 @@ export default class ContactComponent extends React.Component<contactProps, cont
       document.body.classList.remove('modal-open');
     } 
 
-    return this.props.show ? (
-        <div className="contact">
+    return (
+        <div className={this.props.show ? 'contact contact--show' : 'contact'}>
             <div className="contact-background" onClick={this.props.hideForm} />
             <div className="contact__inner">
               <div className="contact__close" onClick={this.props.hideForm} />
@@ -125,6 +125,6 @@ export default class ContactComponent extends React.Component<contactProps, cont
               </div>
             </div>
         </div>
-      ) : null
+      )
   }
 }

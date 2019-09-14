@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { RefObject } from 'react';
 import HeaderComponent from './components/header';
 import AboutComponent from './components/about';
 import { appStateType, caseSection, viewportType } from './types';
@@ -14,6 +14,8 @@ type AppProps = {
 
 export default class App extends React.Component<AppProps, appStateType> {
 
+  private aboutRef = React.createRef<HTMLDivElement>()
+
   constructor(props: AppProps) {
     super(props);
 
@@ -23,7 +25,6 @@ export default class App extends React.Component<AppProps, appStateType> {
     this.handleResize = this.handleResize.bind(this)
     this.showForm = this.showForm.bind(this)
     this.hideForm = this.hideForm.bind(this)
-
   }
 
   componentWillMount() {
@@ -32,7 +33,7 @@ export default class App extends React.Component<AppProps, appStateType> {
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);    
-    window.addEventListener('resize', this.handleResize);    
+    window.addEventListener('resize', this.handleResize);
   }
 
   componentWillUnmount() {
@@ -52,7 +53,7 @@ export default class App extends React.Component<AppProps, appStateType> {
 
     this.setState({
       ...this.state,
-      scrolled: isScrolled
+      scrolled: isScrolled,
     })
   }
 
@@ -70,6 +71,10 @@ export default class App extends React.Component<AppProps, appStateType> {
     })
   }
 
+  scrollToAbout() {
+    this.aboutRef.current && this.aboutRef.current.scrollIntoView({behavior: 'smooth'})
+  }
+
   render() {
 
     let viewport : viewportType;
@@ -83,19 +88,19 @@ export default class App extends React.Component<AppProps, appStateType> {
 
         <ContactComponent show={this.state.showForm} hideForm={() => this.hideForm()} />
 
-        {this.state.sections.map(b => {
+        {this.state.sections.map((b, index) => {
           
           switch(b.type) {
             case 'header':
-              return <HeaderComponent {...b} scrolled={this.state.scrolled} showForm={() => this.showForm()} />;
+              return <HeaderComponent {...b} key={index} scrolled={this.state.scrolled} showForm={() => this.showForm()} scrollToAbout={() => this.scrollToAbout()} />;
             case 'intro':
-              return <AboutComponent {...b} viewport={viewport} />;
+              return <div ref={this.aboutRef}><AboutComponent {...b} key={index} viewport={viewport} /></div>;
             case 'case':
-              return <CaseComponent {...b} />;
+              return <CaseComponent {...b} key={index} />;
             case 'services':
-                return <ServicesComponent {...b} />;
+                return <ServicesComponent {...b} key={index} />;
             case 'references':
-                return <ReferencesComponent {...b} />;
+                return <ReferencesComponent {...b} key={index} />;
             default:
               return null;
         }
