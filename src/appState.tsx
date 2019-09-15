@@ -8,6 +8,10 @@ import portfolio_desktop from "./assets/images/portfolio_desktop.png";
 import portfolio_tablet from "./assets/images/portfolio_tablet.png";
 import portfolio_mobile from "./assets/images/portfolio_mobile.png"
 
+import form_desktop from "./assets/images/form_desktop.png";
+import form_tablet from "./assets/images/form_tablet.png";
+import form_mobile from "./assets/images/form_mobile.png"
+
 import edwin_mobile from "./assets/images/edwin_mobile.png";
 import edwin_desktop from "./assets/images/edwin_desktop.png";
 
@@ -126,9 +130,9 @@ const appState: appStateType = {
       buttons: [
         {text: 'Github Repo', url: 'https://github.com/edwinneef/react-form-builder'}
       ],
-      image_desktop: buro_desktop,
-      image_tablet: buro_tablet,
-      image_mobile: buro_mobile
+      image_desktop: form_desktop,
+      image_tablet: form_tablet,
+      image_mobile: form_mobile
     }
   ]
 };
