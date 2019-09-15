@@ -59,7 +59,7 @@ const appState: appStateType = {
         {
           title: "Front-end development",
           icon: "frontend",
-          text: "Mijn grootste passie. De vertaalslag zijn tussen design, gebruiker en apparaat is iets waar ik energie uit blijf halen."
+          text: "Momenteel mijn grootste passie. De vertaalslag zijn tussen design, gebruiker en apparaat is iets waar ik energie uit blijf halen."
         },
         {
           title: "Back-end development",
@@ -67,9 +67,9 @@ const appState: appStateType = {
           text: "Front-end en back-end development lopen vaak in elkaar over. Ik vind het leuk om de wat eenvoudigere back-end taken zelf op te pakken."
         },
         {
-          title: "(web) Design",
+          title: "Betrokken worden bij het design",
           icon: "design",
-          text: "Soms weet een designer niet hoe moeilijk zijn/haar design vertaald kan worden met code. Ik vind het dan leuk om samen te zoeken naar een oplossing."
+          text: "Soms weet een designer niet of en hoe zijn/haar design vertaald kan worden met code. Ik vind het dan leuk om samen te zoeken naar een oplossing."
         }
       ]
     },

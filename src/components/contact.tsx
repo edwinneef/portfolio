@@ -62,7 +62,7 @@ export default class ContactComponent extends React.Component<contactProps, cont
             <div className="contact__inner">
               <div className="contact__close" onClick={this.props.hideForm} />
               <div className="contact__form">
-                <h3>Contact formulier</h3>
+                <h3 className="contact__title">Contact formulier</h3>
 
                 <div className="contact__intro">
                   <p>Geen fan van contact formulieren? Je kunt natuurlijk ook gewoon mailen naar <a href="mailto:edwinneef@gmail.com">edwinneef@gmail.com</a></p>
