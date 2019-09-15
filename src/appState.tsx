@@ -1,5 +1,13 @@
 import { appStateType } from "./types";
 
+import buro_desktop from "./assets/images/buro_desktop.png";
+import buro_tablet from "./assets/images/buro_tablet.png";
+import buro_mobile from "./assets/images/buro_mobile.png";
+
+import portfolio_desktop from "./assets/images/portfolio_desktop.png";
+import portfolio_tablet from "./assets/images/portfolio_tablet.png";
+import portfolio_mobile from "./assets/images/portfolio_mobile.png"
+
 const appState: appStateType = {
   scrolled: false,
   windowWidth: 0,
@@ -10,7 +18,7 @@ const appState: appStateType = {
       type: "header",
       title: "Hi! Ik ben Edwin Neef, een developer met een passie voor design",
       intro:
-        "Ik word vrolijk van React, Typescript, CSS en HTML.",
+        "Ik word vrolijk van React, Typescript, HTML en CSS.",
       mail_button: { text: "Stuur mij een mail", email: "edwinneef@gmail.com" },
       secondary_button: "Meer over mij"
     },
@@ -36,7 +44,10 @@ const appState: appStateType = {
         "Wil je weten hoe mijn portfolio in elkaar zit? De code is te vinden op mijn github! Alle data wordt op een centraal punt opgeslagen waardoor het eenvoudig is om modules aan te passen, verwijderen of aanmaken. Het is gemaakt in React, Typescript en SASS.",
       buttons: [
         { text: 'Github Repo', url: 'https://github.com/edwinneef/portfolio'}
-      ]
+      ],
+      image_desktop: portfolio_desktop,
+      image_tablet: portfolio_tablet,
+      image_mobile: portfolio_mobile
     },
     {
       type: "services",
@@ -68,7 +79,10 @@ const appState: appStateType = {
         "Voor Buro Souljazz heb ik een Wordpress thema ontwikkelt zodat ze hun eigen website kunnen beheren. Ik heb o.a. gebruik gemaakt van PHP, ACF, TWIG, SASS, JavaScript en React.",
       buttons: [
         { text: 'Live demo', url: 'https://www.burosouljazz.com/', noFollow: true }
-      ]
+      ],
+      image_desktop: buro_desktop,
+      image_tablet: buro_tablet,
+      image_mobile: buro_mobile
     },
     {
       type: "references",
@@ -108,7 +122,10 @@ const appState: appStateType = {
       live_demo_url: "/react-form-builder",
       buttons: [
         {text: 'Github Repo', url: 'https://github.com/edwinneef/react-form-builder'}
-      ]
+      ],
+      image_desktop: buro_desktop,
+      image_tablet: buro_tablet,
+      image_mobile: buro_mobile
     }
   ]
 };

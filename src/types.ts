@@ -31,6 +31,9 @@ export interface caseSection extends section {
     text: string
     live_demo_url?: string
     buttons: ButtonType[]
+    image_desktop: string
+    image_tablet: string
+    image_mobile: string
 }
 
 export interface service {

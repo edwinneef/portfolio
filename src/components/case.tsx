@@ -29,13 +29,13 @@ export default function CaseComponent(props: caseSection) {
                 </div>
                 <div className="case__visual">
                     <figure className="case-visual case-visual--desktop">
-                        <img src="/images/desktop.png" alt="" />
+                        <img src={props.image_desktop} alt={`Desktop ${props.title}`} />
                     </figure>
                     <figure className="case-visual case-visual--tablet">
-                        <img src="/images/tablet.png" alt="" />
+                        <img src={props.image_tablet} alt={`Tablet ${props.title}`} />
                     </figure>
                     <figure className="case-visual case-visual--mobile">
-                        <img src="/images/mobile.png" alt="" />
+                        <img src={props.image_mobile} alt={`Mobile ${props.title}`} />
                     </figure>
                 </div>
             </div>
