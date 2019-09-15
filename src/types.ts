@@ -40,6 +40,7 @@ export interface service {
     icon: string
     title: string
     text: string
+    terms: string
 }
 
 export interface servicesSection extends section {

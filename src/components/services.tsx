@@ -23,6 +23,10 @@ export default function ServicesComponent(props: servicesSection) {
                             <div className="service__text">
                                 {e.text}
                             </div>
+                            
+                        </div>
+                        <div className="service__after">
+                            {e.terms}
                         </div>
                     </li>
                     ))}

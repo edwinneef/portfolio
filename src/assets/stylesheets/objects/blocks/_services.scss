@@ -17,11 +17,17 @@
         list-style: none;
         text-align: center;
         transition: transform 300ms ease;
+        position: relative;
         
         &:hover {
             transform: scale(1.1);
+            z-index: 5;
             .service__inner {
                 box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.03), 0px 5px 15px rgba(0, 0, 0, 0.12), ;
+            }
+            .service__after {
+                opacity: 1;
+                transform: translateY(calc(100% - 30px));
             }
         }
     }
@@ -49,9 +55,30 @@
     height: calc(100% - 50px);
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: 2;
     @include tablet-up {
         margin: 25px;
     }
+}
+
+.service__after {
+    font-size: 14px;
+    opacity: 0.4;
+    width: calc(100% - 70px);
+    background: darken($base-background-color, 25%);
+    color: $white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    margin-left: 25px;
+    margin-right: 25px;
+    left: 10px;
+    padding: 55px 25px 25px 25px;
+    z-index: 1;
+    position: absolute;
+    bottom: 25px;
+    transform: translateY(15px);
+    transition: transform 300ms ease, opacity 300ms ease 100ms;
 }
 
 .service__heading {
