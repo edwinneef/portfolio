@@ -41,11 +41,12 @@ export default class ContactComponent extends React.Component<contactProps, cont
   sendEmail() {
     let templateID = process.env.REACT_APP_EMAILJS_TEMPLATE ? process.env.REACT_APP_EMAILJS_TEMPLATE : '';
     let userID = process.env.REACT_APP_EMAILJS_USER ? process.env.REACT_APP_EMAILJS_USER : ''
+    let mailSubject = this.state.subject ? this.state.subject : 'Nieuw bericht via contact formulier www.edwinneef.nl'
 
     var templateParams = {
       from_name: this.state.name + '(' + this.state.email + ')',
       to_name: 'Edwin',
-      subject: this.state.subject ? this.state.subject : 'Nieuw bericht via contact formulier www.edwinneef.nl',
+      subject: mailSubject,
       message_html: this.state.message
     }
 
