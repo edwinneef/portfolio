@@ -75,7 +75,10 @@ export default class App extends React.Component<AppProps, appStateType> {
     this.aboutRef.current && this.aboutRef.current.scrollIntoView({behavior: 'smooth'})
   }
 
+  
+  
   render() {
+    console.log(process.env)
 
     let viewport : viewportType;
 
@@ -88,24 +91,25 @@ export default class App extends React.Component<AppProps, appStateType> {
 
         <ContactComponent show={this.state.showForm} hideForm={() => this.hideForm()} />
 
-        {this.state.sections.map((b, index) => {
-          
-          switch(b.type) {
-            case 'header':
-              return <HeaderComponent {...b} key={index} scrolled={this.state.scrolled} showForm={() => this.showForm()} scrollToAbout={() => this.scrollToAbout()} />;
-            case 'intro':
-              return <div ref={this.aboutRef}><AboutComponent {...b} key={index} viewport={viewport} /></div>;
-            case 'case':
-              return <CaseComponent {...b} key={index} />;
-            case 'services':
-                return <ServicesComponent {...b} key={index} />;
-            case 'references':
-                return <ReferencesComponent {...b} key={index} />;
-            default:
-              return null;
-        }
+        {this.state.sections.map((b, index) => (
+            <div key={index}> 
+            {(() => {
+              switch(b.type) {
+                case 'header':
+                  return <HeaderComponent {...b} scrolled={this.state.scrolled} showForm={() => this.showForm()} scrollToAbout={() => this.scrollToAbout()} />;
+                case 'intro':
+                  return <div ref={this.aboutRef}><AboutComponent {...b} viewport={viewport} /></div>;
+                case 'case':
+                  return <CaseComponent {...b} />;
+                case 'services':
+                    return <ServicesComponent {...b} />;
+                case 'references':
+                    return <ReferencesComponent {...b} />;
+                default:
+                  return <div></div>;
+          }})()}
+            </div> ))}
 
-        })}
 
         <svg display="none">
           

@@ -148,6 +148,9 @@
     &::placeholder {
         opacity: 0.4;
     }
+    &--error {
+        border: 1px solid tomato;
+    }
 }
 
 .contact__title {

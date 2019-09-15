@@ -22,7 +22,7 @@ export default function CaseComponent(props: caseSection) {
                     <div className="case__actions">
 
                         {props.buttons.map((e, index) => (
-                            <a href={e.url} className="btn btn--primary" target="_blank" rel={e.noFollow ? 'nofollow' : ''}>{e.text}</a>
+                            <a href={e.url} className="btn btn--primary" target="_blank" rel={e.noFollow ? 'nofollow' : ''} key={index}>{e.text}</a>
                         ))}
 
                     </div>

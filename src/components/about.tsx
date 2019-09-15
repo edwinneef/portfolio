@@ -17,7 +17,7 @@ export default function AboutComponent(props: aboutSection) {
                         </figure>
                         } 
                         <div className="about__body text-styled">
-                            {typeof props.text == 'object' ? props.text.map(e => <p>{e}</p>) : <p>{props.text}</p>}
+                            {typeof props.text == 'object' ? props.text.map((e, index) => <p key={index}>{e}</p>) : <p>{props.text}</p>}
                         </div>
                            
                     </div>

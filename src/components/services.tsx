@@ -13,10 +13,9 @@ export default function ServicesComponent(props: servicesSection) {
                 </header>
 
                 <ul className="services__list">
-                    {props.services.map(e => (
-                    <li>
+                    {props.services.map((e, index) => (
+                    <li key={index}>
                         <div className="service__inner">
-                            
                             <svg className="service__icon">
                                 <use xlinkHref={`#${e.icon}`} />
                             </svg>
