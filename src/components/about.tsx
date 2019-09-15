@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { aboutSection } from '../types';
-import Edwin from '../assets/images/edwin_lang.jpeg';
 
 export default function AboutComponent(props: aboutSection) {
     return(
@@ -24,7 +23,7 @@ export default function AboutComponent(props: aboutSection) {
                     </div>
                     {props.image_desktop && props.viewport == 'desktop' &&
                     <figure className="about__visual about__visual--desktop">
-                        <img src={Edwin} alt={props.image_desktop.alt} />
+                        <img src={props.image_desktop.url} alt={props.image_desktop.alt} />
                     </figure>
                     }
 

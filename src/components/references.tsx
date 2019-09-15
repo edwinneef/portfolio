@@ -66,6 +66,18 @@ export default class ReferencesComponent extends React.Component<referencesSecti
                                     </div>
                                 </div>
                             </li>
+                            <div className="slide-prev" onClick={() => this.handlePrevious()}>
+                                <span className="sr-text">Vorige slide</span>
+                                <svg className="slide__icon slide__icon--prev">
+                                    <use xlinkHref="#arrow-right" />
+                                </svg>
+                            </div>
+                            <div className="slide-next" onClick={() => this.handleNext()}>
+                                <span className="sr-text">Volgende slide</span>
+                                <svg className="slide__icon slide__icon--next">
+                                    <use xlinkHref="#arrow-right" />
+                                </svg>
+                            </div>
                         </ul>
                     </Swipeable>
 

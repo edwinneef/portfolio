@@ -8,6 +8,9 @@ import portfolio_desktop from "./assets/images/portfolio_desktop.png";
 import portfolio_tablet from "./assets/images/portfolio_tablet.png";
 import portfolio_mobile from "./assets/images/portfolio_mobile.png"
 
+import edwin_mobile from "./assets/images/edwin_mobile.png";
+import edwin_desktop from "./assets/images/edwin_desktop.png";
+
 const appState: appStateType = {
   scrolled: false,
   windowWidth: 0,
@@ -27,8 +30,8 @@ const appState: appStateType = {
       title: "Over mij",
       intro_text:
         `Van jongs af aan ben ik veel bezig geweest met vormgeving en creatief denken. De laatste jaren houd ik mij voornamelijk bezig met development, waarbij mijn creatieve achtergrond vaker te pas komt dan ik eigenlijk verwacht had.`,
-      image: { url: "http://placekitten.com/650/300", alt: "" },
-      image_desktop: { url: "http://placekitten.com/450/800", alt: "" },
+      image: { url: edwin_mobile, alt: "" },
+      image_desktop: { url: edwin_desktop, alt: "" },
       text: [
         "Op de middelbare school kwam ik in aanraking met web design. Ik vond het geweldig om zogenaamde templates te maken en deze te delen op het internet. Elke dag keek ik of ik downloads had die dag, iets wat mijn geluksfactor toch wel beinvloedde. Ik werd daarom ook erg enthousiast toen iemand mij adviseerde om de templates te coderen, zodat nog meer mensen ze konden gebruiken.",
         "Dit was in de tijd dat coderen gelijk stond aan je photoshop bestand exporteren naar HTML. Het programma knipte automatisch je design in stukjes waardoor je op de juiste plekken tekst kon plaatsen. Zo hoefde je helaas eigenlijk niet veel zelf te doen.",
