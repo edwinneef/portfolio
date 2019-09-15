@@ -78,7 +78,6 @@ export default class App extends React.Component<AppProps, appStateType> {
   
   
   render() {
-    console.log(process.env)
 
     let viewport : viewportType;
 
